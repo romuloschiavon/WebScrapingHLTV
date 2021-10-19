@@ -6,8 +6,8 @@ Este **projeto pessoal** é desenvolvido com foco no aprendizado de ciência de 
 - WebScraping       OK
 - Selenium          OK
 - Scrapy
-- BeautifulSoup
-- Pandas
+- BeautifulSoup     OK
+- Pandas            quase ok
 - DataLake
 - NumPy
 - Snowflake
