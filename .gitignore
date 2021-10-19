@@ -130,3 +130,8 @@ dmypy.json
 
 # Gecko Driver from Firefox
 geckodriver.log
+
+#JSON Files automatically created
+gameChanger.json
+matchHistory.json
+rawStats.json
