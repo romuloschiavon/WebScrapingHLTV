@@ -1,5 +1,6 @@
 import time
 import requests
+import string
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -7,7 +8,7 @@ from selenium.webdriver.firefox.options import Options
 import json
 
 ############################
-#Instanciando o Opera      #
+#Instanciando o Firefox    #
 ############################
 url = "https://www.hltv.org/stats/teams/map/31/8297/furia?startDate=2020-10-14&endDate=2021-10-14"
 
@@ -59,6 +60,22 @@ soup = BeautifulSoup(conteudo, 'html.parser')
 time.sleep(0.5)
 
 matchHistory = soup.find("table", {"class": "stats-table"}) #historico no mapa
+
+############################
+#String Prettifying        #
+############################
+
+rawStatsTitle = []
+rawStatsData = []
+for substrings in statTitle:
+    novoSplit = substrings.split('/')
+    for split in novoSplit:
+        rawStatsTitle.append(string.capwords(split))
+
+for substrings in statData:
+    novoSplit = substrings.split('/')
+    for split in novoSplit:
+        rawStatsData.append(split)
 
 ############################
 #Estruturando o data frame #
