@@ -1,5 +1,13 @@
+'''
+    First time ever doing webscraping, this is the teamwebscraping, and it can be said that its done!   
+    Nevertheless the maps are hard coded, so if in the next 12 months they dont play every single map
+    displayed here, the code will not work and should be re-coded. This can be solved using a webscraping
+    for gathering the maps played and used those names to find where to click, and where to webscrape data
+    but it's going to remain hard-coded because the main learning point of this exercise is already completed,
+    it being learning how to use Selenium, BeautifulSoup and pandas to webscrape and generate JSON files of that data.
+'''
+
 import time
-import requests
 import string
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -106,23 +114,28 @@ def WebScraping(type):
 ############################
 mapas = {
     'ancient': {'mapaID': '1'},
-    'dust2':{'mapaID': '2'},
-    'inferno':{'mapaID': '3'},
-    'mirage':{'mapaID': '4'},
-    'nuke':{'mapaID': '5'},
-    'overpass':{'mapaID': '6'},
-    'train':{'mapaID': '7'},
-    'vertigo':{'mapaID': '8'}
+    'cache':{'mapaID': '2'},
+    'dust2':{'mapaID': '3'},
+    'inferno':{'mapaID': '4'},
+    'mirage':{'mapaID': '5'},
+    'nuke':{'mapaID': '6'},
+    'overpass':{'mapaID': '7'},
+    'train':{'mapaID': '8'},
+    'tuscan':{'mapaID': '9'},
+    'vertigo':{'mapaID': '10'}
 }
 
 ############################
 #Instanciando o Firefox    #
 ############################
-url = "https://www.hltv.org/stats/teams/maps/8297/furia?startDate=2020-10-14&endDate=2021-10-14"
+url = str(input("URL: "))
+
+if not url:
+    url = "https://www.hltv.org/stats/teams/maps/8297/furia?startDate=2020-10-20&endDate=2021-10-20"
 
 option = Options()
-#option.headless = True
-driver = webdriver.Firefox()
+option.headless = True
+driver = webdriver.Firefox(options=option)
 
 driver.get(url)
 driver.implicitly_wait(3)
