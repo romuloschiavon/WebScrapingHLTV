@@ -4,10 +4,10 @@
 Este **projeto pessoal** é desenvolvido com foco no aprendizado de ciência de dados para desenvolver conhecimento sobre as seguintes tecnologias, conceitos, bibliotecas etc...:
 
 - WebScraping       OK
-- Selenium
+- Selenium          OK
 - Scrapy
-- BeautifulSoup
-- Pandas
+- BeautifulSoup     OK
+- Pandas            quase ok
 - DataLake
 - NumPy
 - Snowflake
