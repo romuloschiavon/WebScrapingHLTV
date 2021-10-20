@@ -7,13 +7,15 @@
     it being learning how to use Selenium, BeautifulSoup and pandas to webscrape and generate JSON files of that data.
 '''
 
-import time
+import json
 import string
+import time
+
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-import json
+
 
 ############################
 #Main Function of File     #

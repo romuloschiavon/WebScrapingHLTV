@@ -130,14 +130,11 @@ dmypy.json
 
 # Gecko Driver from Firefox
 geckodriver.log
-<<<<<<< HEAD
-gameChanger.json
-matchHistory.json
-rawStats.json
-=======
 
 #JSON Files automatically created
 gameChanger.json
 matchHistory.json
 rawStats.json
->>>>>>> c451e0e3be6540ce0af2a48eb23c24a5477dce5a
+
+#prettier
+.prettierrc
